@@ -1,4 +1,19 @@
-[
+import WhatshotSharpIcon from '@material-ui/icons/WhatshotSharp';
+import NewReleasesOutlinedIcon from '@material-ui/icons/NewReleasesOutlined';
+import EqualizerOutlinedIcon from '@material-ui/icons/EqualizerOutlined';
+import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownOutlined';
+
+export const tabItems = [{
+    label: "Hot", icon: <WhatshotSharpIcon />
+}, {
+    label: "India", icon: <KeyboardArrowDownOutlinedIcon />
+}, {
+    label: "New", icon: <NewReleasesOutlinedIcon />
+}, {
+    label: "Top", icon: <EqualizerOutlinedIcon />
+}]
+
+export const trendingItems = [
     {
         "title": "Gabriel Ulliel",
         "description": "Gabriel Ulliel, French Actor and Moonlight Star, Dies at 37...",
