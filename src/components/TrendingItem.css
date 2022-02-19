@@ -1,0 +1,11 @@
+.container {
+    border-radius: 4px;
+    background-color:black;
+    height: 148px;
+    color: white
+}
+
+.separator {
+    height: inherit;
+    width: 5px;
+}
