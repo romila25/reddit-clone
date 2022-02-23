@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import TrendingItem from "./components/TrendingItem";
-import { tabItems, trendingItems } from "./data/tabItems";
+import { tabItems, trendingItems, postItems } from "./data/tabItems";
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 function App() {
@@ -51,6 +51,70 @@ function App() {
             // </div>
           } />
         </div>
+        <div className="posts_list_container">
+          {/* <div>
+            <div>
+              <div className="posts_list_container_inner"> */}
+          <TrendingItem render={() =>
+            <div className="posts_list">
+              {
+                postItems.map((postItem: any) =>
+                  <div>
+                    <div>
+                      <div className="posts_list_item_container">
+                        <div className="posts_list_item" style={{ flexDirection: "column" }}>
+                          <div className="posts_list_item_header">
+                            <div className="posts_list_item_icon_container">
+                              <a className="posts_list_item_icon_href">
+                                <img alt="Subreddit Icon" role="presentation" src="https://styles.redditmedia.com/t5_3hx3r/styles/communityIcon_kkg7izl7pwy61.jpg?width=256&amp;s=440641db6ea0cb39e09fb16b5c02171d98f23fc6" className="posts_list_item_icon" />
+                              </a>
+                            </div>
+                            <div className="posts_list_item_information_container">
+                              <div className="posts_list_item_information">
+                                <div className="posts_list_item_information_item">
+                                  <a className="posts_list_item_subreddit">
+                                    {postItem.subReddit}
+                                  </a>
+                                  <div id="SubredditInfoTooltip--t3_swc0ru--MurderedByWords"></div>
+                                </div>
+                                <span className="dot_container" role="presentation">•</span>
+                                <span className="posted_by">Posted by</span>
+                                <div className="posts_list_item_author">
+                                  <a className="posts_list_item_author_href">{postItem.author}</a>
+                                </div>
+                                <a className="posts_list_item_timestamp">4 hours ago</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="posts_list_item_title_container">
+                            <div className="posts_list_item_title">
+                              {postItem.title}
+                            </div>
+                          </div>
+                          <div className="posts_list_item_image_container"></div>
+                        </div>
+                      </div></div></div>
+                )
+              }
+            </div>
+
+            // <div className="recap_container">
+            //   <div className="updates_header">
+            //     <h2 className="updates_from_reddit">updates from reddit</h2>
+            //     <CloseIcon className="close_icon" />
+            //   </div>
+            //   <div className="inner_container">
+
+            //   </div>
+
+            // </div>
+          } />
+          {/* </div>
+      </div>
+
+    </div> */}
+        </div >
+
       </div >
     </div >
   );

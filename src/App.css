@@ -4,6 +4,10 @@
   --newCommunityTheme-field: #F6F7F8;
   --newCommunityTheme-postLine: #ccc;
   --newCommunityTheme-actionIcon: #878A8C;
+  --newCommunityTheme-postLine: #ccc;
+  --newCommunityTheme-postTransparent20: rgba(255,255,255,0.8);
+  --newCommunityTheme-bodyText: #1c1c1c;
+  --newCommunityTheme-metaText: #7c7c7c;
 }
 
 .App {
@@ -158,6 +162,10 @@
 .tabs_more_button {
     display: inline-block;
 }
+.posts_list_container_inner {
+    border-radius: 4px;
+    padding-left: 40px;
+}
 }
 
 .tabs_more_button {
@@ -213,4 +221,176 @@
   margin: 10px;
   height: 64px;
   border: solid 1px;
+}
+
+.posts_list_container {
+  min-height: 1000px;
+  width: 100%;
+  /* margin-left: 400px;
+  width: 100%; */
+}
+
+.posts_list_container_inner {
+  cursor: pointer;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: color .5s,fill .5s,box-shadow .5s;
+  border: 1px solid var(--newCommunityTheme-postLine);
+  background-color: var(--newCommunityTheme-postTransparent20);
+  color: var(--newCommunityTheme-actionIcon);
+}
+
+.posts_list {
+  border-radius: 4px;
+  padding-left: 40px;
+  cursor: pointer;
+  /* transition: color .5s,fill .5s,box-shadow .5s; */
+  /* margin-bottom: 10px; */
+  overflow: hidden;
+  position: relative;
+  /* border: 1px solid var(--newCommunityTheme-postLine); */
+  background-color: var(--newCommunityTheme-postTransparent20);
+  /* color: var(--newCommunityTheme-actionIcon); */
+}
+
+.posts_list_item_container {
+  border-radius: 4px;
+  padding-left: 40px;
+  cursor: pointer;
+  transition: color .5s,fill .5s,box-shadow .5s;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--newCommunityTheme-postLine);
+  background-color: var(--newCommunityTheme-postTransparent20);
+  color: var(--newCommunityTheme-actionIcon);
+}
+
+.posts_list_item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  display: -ms-flexbox;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -ms-flex-align: start;
+  align-items: start;
+  margin: 0 8px 8px;
+  position: relative;
+}
+
+.posts_list_item_icon_container {
+  flex: 0 0 auto;
+}
+
+.posts_list_item_icon_href {
+  font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    color: var(--newCommunityTheme-bodyText);
+    display: inline;
+    line-height: 20px;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+
+.posts_list_item_information_container {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.posts_list_item_information {
+  display: inline;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  -ms-flex-align: center;
+  align-items: center;
+  color: inherit;
+}
+
+.posts_list_item_information_item {
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.posts_list_item_icon {
+  display: inline-block;
+  height: 20px;
+  margin-right: 4px;
+  vertical-align: middle;
+  width: 20px;
+  border-radius: 100%;
+  background-color: rgb(1, 73, 128);
+}
+
+.posts_list_item_subreddit {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--newCommunityTheme-bodyText);
+  display: inline;
+  line-height: 20px;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+.dot_container {
+  color: var(--newCommunityTheme-metaText);
+  font-size: 6px;
+  line-height: 20px;
+  margin: 0 4px;
+  vertical-align: middle;
+}
+
+.posted_by {
+  color: rgb(120, 124, 126);
+  flex: 0 0 auto;
+  margin-right: 3px;
+}
+
+.posts_list_item_author {
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.posts_list_item_author_href {
+  color: rgb(120, 124, 126);
+  margin-right: 3px;
+  text-decoration: none;font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.posts_list_item_timestamp {
+  color: #787C7E;
+  margin-right: 3px;
+  text-decoration: none;
+  display: inline-block;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.posts_list_item_title_container {
+  margin: 0 8px;
+}
+
+.posts_list_item_title {
+  display: inline;
+  position: relative;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.posts_list_item_header { 
+  display: flex;
+  
+
 }
