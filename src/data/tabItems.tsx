@@ -35,3 +35,14 @@ export const trendingItems = [
         "subreddit": "r/Conservative and more"
     }
 ]
+
+export const postItems = [
+    { "subReddit": "r/AskReddit", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
+    { "subReddit": "r/MurderedByWords", "author": "u/sld90", "title": "Design for cross country road trips." },
+    { "subReddit": "r/tippytaps", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
+    { "subReddit": "r/Whatcouldgowrong", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" },
+    { "subReddit": "r/AskReddit", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
+    { "subReddit": "r/MurderedByWords", "author": "u/sld90", "title": "What are some unspoken rules of twitter?" },
+    { "subReddit": "r/tippytaps", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
+    { "subReddit": "r/Whatcouldgowrong", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" }
+]
