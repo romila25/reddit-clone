@@ -1,11 +1,50 @@
-import React from "react";
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import TrendingItem from "./components/TrendingItem";
 import { tabItems, trendingItems, postItems } from "./data/tabItems";
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import WhatshotSharpIcon from '@material-ui/icons/WhatshotSharp';
+import NewReleasesOutlinedIcon from '@material-ui/icons/NewReleasesOutlined';
+import EqualizerOutlinedIcon from '@material-ui/icons/EqualizerOutlined';
+import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownOutlined';
+import ViewCompactIcon from '@material-ui/icons/ViewCompact';
+import ViewAgendaIcon from '@material-ui/icons/ViewAgenda';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ClassIcon from '@material-ui/icons/Class';
 
 function App() {
+  const [tabClicked, setTabClicked] = useState("Hot");
+  const [open, setOpen] = useState(false);
+  let tabClick = false;
+  let clickedTab: any;
+
+  const clickDiv = (event: any) => {
+    console.log(event);
+    const isChildClicked = event.target.children.length == 0 ? true : false;
+    let text = "";
+    if (isChildClicked) {
+      text = event.target.innerText;
+      setTabClicked(text);
+    }
+    else {
+      text = event.target.children[1].innerText;
+      setTabClicked(text);
+    }
+    // if (clickedTab)
+    //   clickedTab.classList.remove("clicked");
+    // tabClick = true;
+    // if (tabClick && !clickedTab.classList.included("clicked")) {
+    //   if (isChildClicked)
+    //     clickedTab = event.target.parentElement;
+    //   else
+    //     clickedTab = event.target;
+    //   clickedTab.classList.add("clicked");
+    // }
+    // tabClick = false;
+  }
+  console.log(postItems[tabClicked]);
+
   return (
     <div className="App">
       <Header />
@@ -27,41 +66,71 @@ function App() {
         <div className="popular_posts">Popular posts</div>
         <div className="updates_from_posts">
           <TrendingItem render={() => <div className="tabs_list">
-            {tabItems.map((tabItem: any) =>
+            <div onClick={clickDiv}>
               <a className="tabs_item" role="button">
-                {tabItem.icon}
-                <span className="tabs_item_label"> {tabItem.label}</span>
+                <WhatshotSharpIcon />
+                <span className="tabs_item_label">Hot</span>
               </a>
-            )}
-            <div className="tabs_more_button_container">
-              <button className="tabs_more_button">
-                <MoreHorizIcon />
-              </button>
+            </div>
+            <div onClick={clickDiv}> <a className="tabs_item" role="button">
+              <KeyboardArrowDownOutlinedIcon />
+              <span className="tabs_item_label">Rising</span>
+            </a>
+            </div>
+            <div onClick={clickDiv}>
+              <a className="tabs_item" role="button">
+                <NewReleasesOutlinedIcon />
+                <span className="tabs_item_label">New</span>
+              </a>
+            </div>
+            <div onClick={clickDiv}>
+              <a className="tabs_item" role="button">
+                <EqualizerOutlinedIcon />
+                <span className="tabs_item_label">Top</span>
+              </a>
+            </div>
+            <div style={{ flexFlow: "row nowrap" }} className="tabs_list_right wrap">
+              <div className="tabs_list_right_dropdown" onClick={() => setOpen(!open)}>
+                <button role="menuitem" className="tabs_list_button">
+                  <span className="tabs_list_dropdown_icon_container">
+                    <ViewAgendaIcon />
+                  </span>
+                  <ExpandMoreIcon />
+                </button>
+                {open && <div style={{ bottom: 0, borderRadius: "5px", background: "#f2f8fc" }} className="dropdown">
+                  <button role="menuitem" className="tabs_list_button">
+                    <span className="tabs_list_dropdown_icon">
+                      <ViewCompactIcon />
+                      <span className="tabs_list_dropdown_text">Card</span>
+                    </span>
+                  </button>
+                  <button role="menuitem" className="tabs_list_button">
+                    <span className="tabs_list_dropdown_icon">
+                      <ClassIcon />
+                      <span className="tabs_list_dropdown_text">Classic</span>
+                    </span>
+                  </button>
+                  <button role="menuitem" className="tabs_list_button">
+                    <span className="tabs_list_dropdown_icon">
+                      <ViewCompactIcon />
+                      <span className="tabs_list_dropdown_text">Compact</span>
+                    </span>
+                  </button>
+                </div>}
+              </div>
+
             </div>
           </div>
-            // <div className="recap_container">
-            //   <div className="updates_header">
-            //     <h2 className="updates_from_reddit">updates from reddit</h2>
-            //     <CloseIcon className="close_icon" />
-            //   </div>
-            //   <div className="inner_container">
-
-            //   </div>
-
-            // </div>
           } />
         </div>
         <div className="posts_list_container">
-          {/* <div>
-            <div>
-              <div className="posts_list_container_inner"> */}
           <TrendingItem render={() =>
             <div className="posts_list">
               {
-                postItems.map((postItem: any) =>
+                postItems[tabClicked].map((postItem: any) =>
                   <div>
                     <div>
-                      <div className="posts_list_item_container">
+                      <div className=" ">
                         <div className="posts_list_item" style={{ flexDirection: "column" }}>
                           <div className="posts_list_item_header">
                             <div className="posts_list_item_icon_container">
@@ -97,23 +166,31 @@ function App() {
                 )
               }
             </div>
-
-            // <div className="recap_container">
-            //   <div className="updates_header">
-            //     <h2 className="updates_from_reddit">updates from reddit</h2>
-            //     <CloseIcon className="close_icon" />
-            //   </div>
-            //   <div className="inner_container">
-
-            //   </div>
-
-            // </div>
           } />
-          {/* </div>
-      </div>
-
-    </div> */}
         </div >
+        <div className="sidebar_widget">
+          <div className="sidebar_widget_container">
+            <div className="sidebar_widget_list_container">
+              <div className="sidebar_widget_list_container_block">
+                <div className="sidebar_widget_list_container_top">
+                  <h2 className="sidebar_widget_list_header">
+                    <a>
+                      Top
+                      <span>
+                        &nbsp;
+                        Aww
+                        &nbsp;
+                      </span>
+                      Communities
+                    </a>
+                  </h2>
+                </div>
+                <ol></ol>
+              </div>
+            </div>
+
+          </div>
+        </div>
 
       </div >
     </div >
