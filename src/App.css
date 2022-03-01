@@ -8,6 +8,9 @@
   --newCommunityTheme-postTransparent20: rgba(255,255,255,0.8);
   --newCommunityTheme-bodyText: #1c1c1c;
   --newCommunityTheme-metaText: #7c7c7c;
+  --newCommunityTheme-widgetColors-sidebarWidgetBackgroundColor: #FFFFFF;
+  --newCommunityTheme-widgetColors-sidebarWidgetBorderColor: #ccc;
+  --newCommunityTheme-widgetColors-sidebarWidgetTextColor: #1A1A1B;
 }
 
 .App {
@@ -29,7 +32,7 @@
 
 .section {
   background-color: #DAE0E6;
-  height: 100vh;
+  height: 100%;
 }
 
 .trending_section {
@@ -123,6 +126,7 @@
   /* justify-content: center; */
   margin-bottom: 16px;
   padding: 10px 12px;
+  width: 50%
 }
 
 .tabs_list {
@@ -139,11 +143,15 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  color: var(--newCommunityTheme-button);
+ 
   background: var(--newCommunityTheme-field);
   /* border: solid var(--newCommunityTheme-field); */
   border-radius: 20px;
   padding: 6px 8px;
+}
+
+.clicked {
+ color: var(--newCommunityTheme-button);
 }
 
 .tabs_more_button_container {
@@ -161,11 +169,18 @@
 @media (min-width: 1010px) {
 .tabs_more_button {
     display: inline-block;
+    
 }
 .posts_list_container_inner {
     border-radius: 4px;
     padding-left: 40px;
 }
+}
+
+@media(min-width: 960px) {
+  .sidebar_widget { 
+    display: block;
+  }
 }
 
 .tabs_more_button {
@@ -177,6 +192,80 @@
  cursor: pointer;
  color: var(--newCommunityTheme-actionIcon);
 }
+
+.dropdown {
+  position: absolute;
+  z-index: 99; 
+  top: -15; 
+  left: 40;
+  background: "#ffffff";
+  border-radius: "5px";
+}
+
+.sidebar_widget {
+  margin-left: 24px;
+  margin-top: 28px;
+  flex: 0 0 312px;
+  width: 312px;
+}
+
+.sidebar_widget_top {
+  max-height: none;
+  padding: 0;
+  display: block;
+}
+
+.sidebar_widget_container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar_widget_list_container {
+    background-color: var(--newCommunityTheme-widgetColors-sidebarWidgetBackgroundColor);
+    color: var(--newCommunityTheme-widgetColors-sidebarWidgetTextColor);
+    fill: var(--newCommunityTheme-widgetColors-sidebarWidgetTextColor);
+    border: 1px solid var(--newCommunityTheme-widgetColors-sidebarWidgetBorderColor);
+    border-radius: 4px;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.sidebar_widget_list_container_block {
+  max-height: none;
+  padding: 0;
+}
+
+.sidebar_widget_list_container_top  {
+  background-color: #0079d3;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  height: 80px;
+  position: relative;
+  background-image: url(https://styles.redditmedia.com/t5_2qh1o/styles/bannerBackgroundImage_wmbf6g1dei301.png);
+
+}
+
+.sidebar_widget_list_header {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    bottom: 8px;
+    color: #fff;
+    left: 16px;
+    position: absolute;
+}
+
+.sidebar_widget_list_container_top::before {
+  background: linear-gradient(0deg,rgba(0,0,0,.7) 0,transparent);
+  content: "";
+  height: 80px;
+  position: absolute;
+  width: 100%;
+}
+
 
 
 .tabs_item:hover {
@@ -225,9 +314,82 @@
 
 .posts_list_container {
   min-height: 1000px;
+  width: 50%;
+  margin-left: 296px;
+}
+
+.tabs_list_right {
+  margin-left: auto;
+
+}
+
+.wrap {
+  align-items: center;
+  display: flex;
+  flex-wrap: row nowrap;
+}
+
+.tabs_list_dropdown_icon_container {
+  display: inline-flex;
+  margin-right: 0;
+}
+
+.tabs_list_button {
+  color: var(--newCommunityTheme-actionIcon);
+  fill: #0079D3;
+  display: flex;
+  outline: none;
+  position: relative;
+  align-items: center;
+  display: flex;
+  position: relative;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  display: block;
+  padding: 8px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  flex-direction: row;
+  text-align: left;
   width: 100%;
-  /* margin-left: 400px;
-  width: 100%; */
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.tabs_list_dropdown_icon {
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.tabs_list_button_text {
+  /* display: none; */
+  color: var(--newCommunityTheme-actionIcon);
+  fill: var(--newCommunityTheme-button)
+}
+
+.tabs_list_right_dropdown {
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  height: 32px;
+  padding: 0 8px;
+  margin-left: 260px;
+}
+
+.tabs_list_dropdown_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+}
+
+.tabs_list_right_dropdown:hover {
+  background-color: #f2f8fc;
 }
 
 .posts_list_container_inner {

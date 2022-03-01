@@ -36,13 +36,45 @@ export const trendingItems = [
     }
 ]
 
-export const postItems = [
-    { "subReddit": "r/AskReddit", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
-    { "subReddit": "r/MurderedByWords", "author": "u/sld90", "title": "Design for cross country road trips." },
-    { "subReddit": "r/tippytaps", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
-    { "subReddit": "r/Whatcouldgowrong", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" },
-    { "subReddit": "r/AskReddit", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
-    { "subReddit": "r/MurderedByWords", "author": "u/sld90", "title": "What are some unspoken rules of twitter?" },
-    { "subReddit": "r/tippytaps", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
-    { "subReddit": "r/Whatcouldgowrong", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" }
-]
+export const postItems: any = {
+
+    "Hot": [
+        { "subReddit": "r/AskReddit", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/MurderedByWords", "author": "u/sld90", "title": "Design for cross country road trips." },
+        { "subReddit": "r/tippytaps", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/Whatcouldgowrong", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" },
+        { "subReddit": "r/AskReddit", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/MurderedByWords", "author": "u/sld90", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/tippytaps", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/Whatcouldgowrong", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" }]
+
+    , "New": [
+        { "subReddit": "r/TrueOffMyChest", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/yesyesyesno", "author": "u/sld90", "title": "Design for cross country road trips." },
+        { "subReddit": "r/nononoyes", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/WhatcouldgowrongI", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" },
+        { "subReddit": "r/nextfuckinglevel", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/MurderedByWordsI", "author": "u/sld90", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/tippytapsI", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/WhatcouldgowrongI", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" }]
+    ,
+    "Rising": [
+        { "subReddit": "r/AskReddit", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/MurderedByWords", "author": "u/sld90", "title": "Design for cross country road trips." },
+        { "subReddit": "r/tippytaps", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/Whatcouldgowrong", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" },
+        { "subReddit": "r/AskReddit", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/MurderedByWords", "author": "u/sld90", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/tippytaps", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/Whatcouldgowrong", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" }]
+    ,
+    "Top": [
+        { "subReddit": "r/AskReddit", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/MurderedByWords", "author": "u/sld90", "title": "Design for cross country road trips." },
+        { "subReddit": "r/tippytaps", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/Whatcouldgowrong", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" },
+        { "subReddit": "r/AskReddit", "author": "u/78jsf", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/MurderedByWords", "author": "u/sld90", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/tippytaps", "author": "u/n34del", "title": "What are some unspoken rules of twitter?" },
+        { "subReddit": "r/Whatcouldgowrong", "author": "", "title": "Trying to beat the train hauling a wind turbine blade?" }]
+}
